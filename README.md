@@ -1,4 +1,4 @@
-## Blockchain-based coupon system
+## CouponSystem (Blockchain-based)
 
 >블록체인을 기반으로 하여 쿠폰 발급과 관리를 할 수 있는 시스템이다. 
 해당 시스템을 사용하는 카페는 개별적으로 발급하여 사용하는 기존의 쿠폰 시스템에서 벗어나 통합적으로 쿠폰을 발급하여 사용할 수 있다. 
