@@ -1,0 +1,138 @@
+@BASEURL=http://localhost:5000/api/v1
+
+
+GET {{BASEURL}}/ceotb
+//test
+
+POST {{BASEURL}}/ceotb
+Content-Type: application/json
+
+{
+  "ceoId":"a-ceo",
+  "ceoPw": "1234",
+  "ceoPt": 5
+}
+
+
+POST {{BASEURL}}/ceotb/ceo/login
+Content-Type: application/json
+
+{
+  "ceoId":"a-ceo",
+  "ceoPw": "12345"
+  
+}
+
+
+
+
+
+
+PUT {{BASEURL}}/ceotb
+Content-Type: application/json
+
+{
+  "ceoId":"a-ceo",
+  "ceoPw": "12345",
+  "ceoPt": 8
+}
+
+DELETE {{BASEURL}}/ceotb/a-ceo
+
+
+POST {{BASEURL}}/users
+Content-Type: application/json
+
+{
+  "id": "abc3",
+  "password": "12342",
+  "name": "test1"
+}
+
+// search
+GET {{BASEURL}}/users
+
+// 1 page
+GET {{BASEURL}}/users?offset=0&limit=10&sort=-createdAt&name=test123
+// 2 page
+GET {{BASEURL}}/users?offset=10&limit=10
+// 3 page
+GET {{BASEURL}}/users?offset=20&limit=10
+
+GET {{BASEURL}}/users?offset=-1&limit=20000
+
+GET {{BASEURL}}/users?offset=3&limit=1
+
+
+
+GET {{BASEURL}}/faldsfjslfjsdalffasdjlfds
+
+
+
+
+
+GET {{BASEURL}}/users/629afe726527a60394a70377
+
+PUT {{BASEURL}}/users/629afe726527a60394a70377
+Content-Type: application/json
+
+{
+  "password": "change1234",
+  "name": "changetest",
+  "role": "COMPOSER"
+}
+
+
+DELETE {{BASEURL}}/users/629afda88697ad20b47ac8c0
+
+
+
+
+
+POST {{BASEURL}}/authentication/login
+Content-Type: application/json
+
+{
+  "id": "abc",
+  "password": "1234",
+  "name": "test"
+}
+
+
+GET {{BASEURL}}/authentication/logout
+
+//customer
+POST {{BASEURL}}/cust
+Content-Type: application/json
+
+{
+  "custId": "cccc",
+  "custPw": "1234",
+  "custPt": 0
+}
+
+POST {{BASEURL}}/cust/login
+Content-Type: application/json
+
+{
+  "custId": "cccc",
+  "custPw": "1234"
+}
+
+
+POST {{BASEURL}}/ceotb
+Content-Type: application/json
+
+{
+  "ceoId": "ceo1",
+  "ceoPw": "1234",
+  "ceoPt": 0
+}
+
+POST {{BASEURL}}/ceotb/login
+Content-Type: application/json
+
+{
+  "ceoId": "ceo1",
+  "ceoPw": "1234"
+}
